@@ -40,5 +40,5 @@ echo "isArch = $isArch"
 if [ $isUbuntu ]; then
     sudo apt install wget curl git zsh
     cd $HOME
-    wget https://raw.githubusercontent.com/BHD25/LinuxSetup/master/bash_aliases
+    wget https://raw.githubusercontent.com/BHD25/LinuxSetup/master/.bash_aliases
 exit
