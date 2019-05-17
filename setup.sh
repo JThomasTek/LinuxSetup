@@ -39,7 +39,7 @@ if [ $isUbuntu == true ]; then
     sudo apt install wget curl git zsh
     cd $HOME
     wget https://raw.githubusercontent.com/BHD25/LinuxSetup/master/Ubuntu/.bash_aliases
-
+    echo "Figure out how to install oh-my-zsh"
     exit
 fi
 
@@ -48,7 +48,7 @@ if [ $isArch == true ]; then
     sudo pacman -Syu wget curl git zsh
     cd $HOME
     wget https://raw.githubusercontent.com/BHD25/LinuxSetup/master/Arch/.bash_aliases
-
+    echo "Figure out how to install oh-my-zsh"
     exit
 fi
 
