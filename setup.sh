@@ -34,11 +34,22 @@ else
     isUbuntu=true
 fi
 
-echo "isUbuntu = $isUbuntu"
-echo "isArch = $isArch"
-
-if [ $isUbuntu ]; then
+if [ $isUbuntu == true ]; then
+    echo "Running setup for Ubuntu."; echo;
     sudo apt install wget curl git zsh
     cd $HOME
-    wget https://raw.githubusercontent.com/BHD25/LinuxSetup/master/.bash_aliases
+    wget https://raw.githubusercontent.com/BHD25/LinuxSetup/master/Ubuntu/.bash_aliases
+
+    exit
+fi
+
+if [ $isArch == true ]; then
+    echo "Running setup for Arch."; echo;
+    sudo pacman -Syu wget curl git zsh
+    cd $HOME
+    wget https://raw.githubusercontent.com/BHD25/LinuxSetup/master/Arch/.bash_aliases
+
+    exit
+fi
+
 exit

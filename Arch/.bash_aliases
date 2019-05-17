@@ -19,13 +19,15 @@ alias gitsui="git submodule init --recursive"
 alias gitsup="git submodule update --recursive"
 
 alias clean="make clean"
+alias build="make -j 2"
 alias lsgroups="cut -d: -f1 /etc/group | sort"
 
-alias update="sudo apt update"
-alias upgrade="sudo apt upgrade"
-alias install="sudo apt install"
-alias autoremove="sudo apt autoremove"
-alias purge="sudo apt purge"
+alias upgrade="sudo pacman -Syu"
+alias install="sudo pacman -Syu"
+alias search="sudo pacman -Ss"
+alias remove="sudo pacman -R"
+alias purge="sudo pacman -Rs"
+alias autoremove="sudo pacman -Rsn $(pacman -Qdtq)"
 
 alias ll='ls -alFh'
 alias la='ls -A'
